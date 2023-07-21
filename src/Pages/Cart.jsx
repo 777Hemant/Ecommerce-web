@@ -29,7 +29,7 @@ const Cart = () => {
         <div className="max-w-3xl grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {cart.map((post) => (
             <div key={post.id} className="p-4 border border-gray-300 rounded-lg shadow-md">
-              <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+              <img src={post.image} alt={post.title} className="w-full h-48 object-cover max-w-full h-auto" />
               <h3 className="text-gray-900 font-semibold text-xl my-2">{post.title}</h3>
               <div className="text-2xl text-red-800">${post.price}</div>
               <AiOutlineDelete size={30} onClick={() => handleRemoveItem(post.id)} />
@@ -52,4 +52,5 @@ const Cart = () => {
 };
 
 export default Cart;
+
 
