@@ -24,7 +24,7 @@ const Product = ({ item }) => {
 
   return (
     <div className="container w-full hover:scale-105 transition-all duration-750 max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden mb-10">
-      <img src={item.image} alt={item.title} className="w-full h-56 object-cover object-center" />
+      <img src={item.image} alt={item.title} className="w-full h-56 object-cover object-center" loading='lazy' />
       <div className="p-4">
         <h3 className="text-gray-900 font-bold text-xl mb-2">{item.title}</h3>
         <div className="text-gray-700 text-base mb-4">
