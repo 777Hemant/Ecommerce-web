@@ -20,28 +20,34 @@ const Cart = () => {
   };
 
   return (
-    <div className="p-4 w-full">
+    <div className="p-4">
       {cart.length === 0 ? (
         <div className="text-gray-600 py-8 my-40 text-3xl flex justify-center items-center">
           There is no product added to the cart.
         </div>
       ) : (
-        <div className="container mx-auto overflow-x-hidden">
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {cart.map((post) => (
               <div
                 key={post.id}
-                className="container w-full p-4 border border-gray-300 rounded-lg shadow-md"
+                className="p-4 border border-gray-300 rounded-lg shadow-md flex flex-col justify-between"
               >
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-56 object-cover object-center"
+                  className="h-56 w-full object-cover object-center mb-4"
                 />
-
-                <h3 className="text-gray-900 font-semibold text-xl my-2">{post.title}</h3>
-                <div className="text-2xl text-red-800">${post.price}</div>
-                <AiOutlineDelete size={30} onClick={() => handleRemoveItem(post.id)} />
+                <div>
+                  <h3 className="text-gray-900 font-semibold text-xl my-2">{post.title}</h3>
+                  <div className="text-2xl text-red-800">${post.price}</div>
+                </div>
+                <button
+                  className="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg text-sm hover:bg-red-600"
+                  onClick={() => handleRemoveItem(post.id)}
+                >
+                  Remove
+                </button>
               </div>
             ))}
           </div>
@@ -62,7 +68,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-
-
-
