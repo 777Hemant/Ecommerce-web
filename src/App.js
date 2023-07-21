@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} /> {/* Set the Home page as the default route */}
+        <Route path="/" element={<Home />} />
         <Route path="/Products" element={<Products />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
