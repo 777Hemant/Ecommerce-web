@@ -20,22 +20,23 @@ const Cart = () => {
   };
 
   return (
-    <div className="p-4 max-w-screen-sm">
+    <div className="p-4 w-[100vw]">
       {cart.length === 0 ? (
         <div className="text-gray-600 py-8 my-40 text-3xl flex justify-center items-center">
           There is no product added to the cart.
         </div>
       ) : (
-        <div className="max-w-fit grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className=" grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {cart.map((post) => (
-            <div key={post.id} className="p-4 border border-gray-300 rounded-lg shadow-md">
-              <img src={post.image} alt={post.title} className="object-cover max-w-full h-auto" />
+            <div key={post.id} className="container w-full p-4 border border-gray-300 rounded-lg shadow-md">
+              <img src={post.image} alt={post.title} className="w-full h-56 object-cover object-center" />
+             
               <h3 className="text-gray-900 font-semibold text-xl my-2">{post.title}</h3>
               <div className="text-2xl text-red-800">${post.price}</div>
               <AiOutlineDelete size={30} onClick={() => handleRemoveItem(post.id)} />
             </div>
           ))}
-          <div className="container bg-green-200 text-black min-w-fit text-2xl p-10">
+          <div className="container bg-green-200 text-black  text-2xl p-10 w-full h-56 object-cover object-center">
             <p className="font-serif text-black">
               Total items you have bought:<span className="ml-8 bg-slate-400 font-serif">{cart.length}</span>
             </p>
