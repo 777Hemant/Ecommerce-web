@@ -31,12 +31,12 @@ const Cart = () => {
             {cart.map((post) => (
               <div
                 key={post.id}
-                className="p-4 border border-gray-300 rounded-lg shadow-md flex flex-col justify-between"
+                className="p-4  border-gray-300 rounded-lg shadow-md flex flex-col justify-between w-[230px] border-[5px]"
               >
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="h-56 w-full object-cover object-center mb-4"
+                  className="h-56 w-[190px] object-fit object-center mb-4"
                 />
                 <div>
                   <h3 className="text-gray-900 font-semibold text-xl my-2">{post.title}</h3>
@@ -51,7 +51,7 @@ const Cart = () => {
               </div>
             ))}
           </div>
-          <div className="container bg-green-200 text-black text-2xl p-10 mt-8">
+          <div className="container bg-green-200 text-black text-2xl p-10 mt-8 w-[230px]">
             <p className="font-serif text-black">
               Total items you have bought:<span className="ml-8 bg-slate-400 font-serif">{cart.length}</span>
             </p>
