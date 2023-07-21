@@ -17,13 +17,13 @@ const Home = () => {
         setDisplayText((prevText) => prevText + textArray[index]);
         animationTimer = setTimeout(() => {
           animateTyping(index + 1);
-        }, 100); // Change the delay here (in milliseconds) to control typing speed
+        }, 100); 
       } else {
-        // Reset the animation to start from the beginning
+    
         animationTimer = setTimeout(() => {
           setDisplayText('');
           animateTyping(0);
-        }, 700); // Delay before resetting the animation (in this case, 2000ms or 2 seconds)
+        }, 500);
       }
     };
 
