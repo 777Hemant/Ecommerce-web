@@ -1,25 +1,26 @@
-import React from 'react'
-import { Route,Routes } from 'react-router-dom'
-import Home from './Pages/Home'
-import Products from './Pages/Products'
-import Navbar from './Components/Navbar'
-import Login from './Pages/Login'
-import SignUp from './Pages/SignUp'
-import Cart from './Pages/Cart'
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home';
+import Products from './Pages/Products';
+import Navbar from './Components/Navbar';
+import Login from './Pages/Login';
+import SignUp from './Pages/SignUp';
+import Cart from './Pages/Cart';
 
 const App = () => {
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/Products" element={<Products/>}></Route>
-        <Route path="/Login" element={<Login/>}></Route>
-        <Route path="/SignUp" element={<SignUp/>}></Route>
-      <Route path="/Cart" element={<Cart/>}></Route>
+        <Route path="/" element={<Home />} index /> {/* Set as the default route */}
+        <Route path="/Products" element={<Products />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Cart" element={<Cart />} />
       </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
+
