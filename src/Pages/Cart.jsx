@@ -3,12 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { toast } from 'react-toastify';
-import {  remove } from '../redux/slices/CartSlice';
+import { remove } from '../redux/slices/CartSlice';
 
 const Cart = () => {
   const { cart } = useSelector((state) => state);
   const [totalAmount, setTotalAmount] = useState(0);
-  
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,11 +22,11 @@ const Cart = () => {
   return (
     <div className="p-4">
       {cart.length === 0 ? (
-        <div className="text-gray-600 py-8 my-40 text-3xl flex text-center ml-[500px]">
+        <div className="text-gray-600 py-8 my-40 text-3xl flex justify-center items-center">
           There is no product added to the cart.
         </div>
       ) : (
-        <div className="w-[1200px] grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="max-w-3xl grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {cart.map((post) => (
             <div key={post.id} className="p-4 border border-gray-300 rounded-lg shadow-md">
               <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
@@ -53,3 +52,4 @@ const Cart = () => {
 };
 
 export default Cart;
+
