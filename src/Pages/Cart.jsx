@@ -20,7 +20,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 w-full">
       {cart.length === 0 ? (
         <div className="text-gray-600 py-8 my-40 text-3xl flex justify-center items-center">
           There is no product added to the cart.
