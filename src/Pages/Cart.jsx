@@ -27,7 +27,7 @@ const Cart = () => {
         </div>
       ) : (
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full h-full">
             {cart.map((post) => (
               <div
                 key={post.id}
@@ -36,7 +36,7 @@ const Cart = () => {
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="h-56 w-[190px] object-fit object-center mb-4"
+                  className="h-56 w-full object-cover object-center mb-4"
                 />
                 <div>
                   <h3 className="text-gray-900 font-semibold text-xl my-2">{post.title}</h3>
@@ -51,7 +51,7 @@ const Cart = () => {
               </div>
             ))}
           </div>
-          <div className="container bg-green-200 text-black text-2xl p-10 mt-8 w-[230px]">
+          <div className="container bg-green-200 text-black text-2xl p-10 mt-8 w-full">
             <p className="font-serif text-black">
               Total items you have bought:<span className="ml-8 bg-slate-400 font-serif">{cart.length}</span>
             </p>
