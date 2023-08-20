@@ -16,7 +16,10 @@ const Cart = () => {
 
   const handleRemoveItem = (id) => {
     dispatch(remove(id));
-    toast.success('Product is removed');
+    toast.success('Product is removed'
+    , {
+      position: "bottom-center", // Position the individual toast at the bottom
+  });
   };
 
   return (
@@ -26,7 +29,7 @@ const Cart = () => {
           There is no product added to the cart.
         </div>
       ) : (
-        <div className="container mx-auto">
+        <div className="container mx-auto flex flex-wrap">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full h-full">
             {cart.map((post) => (
               <div

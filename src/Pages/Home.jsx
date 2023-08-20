@@ -41,7 +41,7 @@ const Home = () => {
       <h1 className="text-4xl font-bold mb-8">{displayText}</h1>
       <p className="text-xl mt-20 animate-bounce">
         <img
-          className="w-44 h-44 rounded-full"
+          className="w-16  md:w-44 md:h-44 rounded-full"
           src="https://img.freepik.com/premium-vector/online-shopping-logo-wordmark-collection-set-design-vector-template_556845-189.jpg?size=626&ext=jpg&ga=GA1.1.2008654676.1689830924&semt=ais"
           alt=""
         />
