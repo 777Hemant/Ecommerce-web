@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import 'tailwindcss/tailwind.css';
 
 const Home = () => {
-  const initialText = "Welcome to Hemant Mishra's Shop";
+  const initialText = "Welcome to Hemant Mishra's eShop";
   const [displayText, setDisplayText] = useState('');
 
   useEffect(() => {
